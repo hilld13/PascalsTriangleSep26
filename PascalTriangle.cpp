@@ -45,6 +45,8 @@ void level(int levelNum, unsigned int levelElements[])
         //cout << "i:" << i << ":" << levelElements[i] << "\t";
         cout << levelElements[i] << " \t";
     cout << endl;
+
+    delete[] prevLevelElements;
 }
 
 int main ()
@@ -59,6 +61,8 @@ int main ()
     unsigned int* levelElements = new unsigned int[levels+1];
     
     level(levels, levelElements);
+
+    delete[] levelElements;
     
     return 0;
 }
